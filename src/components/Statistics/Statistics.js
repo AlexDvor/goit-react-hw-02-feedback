@@ -1,8 +1,9 @@
 
 // import style from './FeedBackStat.module.css'
 import Notification from "../Notification";
+import PropTypes from 'prop-types';
 
-function FeedBackStat({ good,neutral,bad,total,positivePercentage }) {
+function Statistics({ good,neutral,bad,total,positivePercentage }) {
     return (
         <>
             {total > 0 ? <>
@@ -16,4 +17,13 @@ function FeedBackStat({ good,neutral,bad,total,positivePercentage }) {
     )
 }
 
-export default FeedBackStat;
+Statistics.propTypes = {
+    good:PropTypes.number,
+    number:PropTypes.number,
+    bad: PropTypes.number,
+    total:PropTypes.number,
+    positivePercentage :PropTypes.number,
+}
+
+
+export default Statistics;

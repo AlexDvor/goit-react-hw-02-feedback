@@ -1,6 +1,4 @@
-// import FeedBack from "./components/FeedBack";
 import React, { Component } from "react";
-
 import FeedbackOptions from "./components/FeedbackOptions";
 import Statistics from "./components/Statistics";
 import Container from "./components/Container/Container";
@@ -10,7 +8,6 @@ import Section from "./components/Section";
 
 
 class App extends Component {
-
 
     state = {
         good: 0,
@@ -61,7 +58,6 @@ class App extends Component {
     return percentage.toFixed();
     
   }
-
 
   render() {
       

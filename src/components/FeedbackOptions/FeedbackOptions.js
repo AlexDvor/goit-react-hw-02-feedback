@@ -1,7 +1,8 @@
 
 import style from './FeedbackOptions.module.css'
+import PropTypes from 'prop-types';
 
-function FeedBackButtons({onLeaveFeedback}) {
+function FeedbackOptions({onLeaveFeedback}) {
     return (
         <>
             <button className={style.btn} onClick={()=>onLeaveFeedback("good")}>good</button>
@@ -11,4 +12,9 @@ function FeedBackButtons({onLeaveFeedback}) {
     )
 }
 
-export default FeedBackButtons;
+
+FeedbackOptions.propTypes = {
+onLeaveFeedback:PropTypes.func,
+}
+
+export default FeedbackOptions;
