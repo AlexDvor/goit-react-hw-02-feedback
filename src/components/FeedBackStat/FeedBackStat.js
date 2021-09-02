@@ -1,7 +1,7 @@
 
 // import style from './FeedBackStat.module.css'
 
-function FeedBackStat({ state, onCountTotalFeedback }) {
+function FeedBackStat({ state, totalFeedback, positiveFeedbackPercentage } ) {
     const { good, neutral, bad } = state;
   
     return (
@@ -10,8 +10,8 @@ function FeedBackStat({ state, onCountTotalFeedback }) {
             <p>good: {good}</p>
             <p>neutral: {neutral}</p>
             <p>bad: {bad}</p>
-            <p>total: {onCountTotalFeedback()}</p>
-            <p>positive feedback:</p>
+            <p>total: {totalFeedback}</p>
+            <p>positive feedback: {positiveFeedbackPercentage}%</p>
         
         </>
     )
