@@ -1,12 +1,12 @@
 
 import style from './FeedbackOptions.module.css'
 
-function FeedBackButtons({updatedState}) {
+function FeedBackButtons({onLeaveFeedback}) {
     return (
         <>
-            <button className={style.btn} onClick={()=>updatedState("good")}>good</button>
-            <button className={style.btn} onClick={()=>updatedState("neutral")}>neutral</button>
-            <button className={style.btn} onClick={() =>updatedState("bad")}>bad</button>
+            <button className={style.btn} onClick={()=>onLeaveFeedback("good")}>good</button>
+            <button className={style.btn} onClick={()=>onLeaveFeedback("neutral")}>neutral</button>
+            <button className={style.btn} onClick={() =>onLeaveFeedback("bad")}>bad</button>
             </>
     )
 }

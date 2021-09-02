@@ -18,7 +18,7 @@ class App extends Component {
         bad: 0
     }
 
-    updatedState = value => {
+    leaveFeedback = value => {
 
         if (value === "good") {
             this.setState((prevState) => {
@@ -66,20 +66,24 @@ class App extends Component {
   render() {
       
     const totalFeedback = this.countTotalFeedback();
-    const positiveFeedbackPercentage = this.countPositiveFeedbackPercentage(totalFeedback);
+      const positiveFeedbackPercentage = this.countPositiveFeedbackPercentage(totalFeedback);
+      const { good, neutral, bad } = this.state;
+      
 
         return (
             <Container>
 
                 <Section text='please leave feedback'>
-                    <FeedBackButtons updatedState={this.updatedState}></FeedBackButtons>
+                    <FeedBackButtons onLeaveFeedback={this.leaveFeedback}></FeedBackButtons>
                 </Section>
 
                 <Section text='statistics'>
                     <Statistics
-                        state={this.state}
-                        totalFeedback={totalFeedback}
-                        positiveFeedbackPercentage={positiveFeedbackPercentage}>
+                        good={good}
+                        neutral={neutral}
+                        bad={bad}
+                        total={totalFeedback}
+                        positivePercentage={positiveFeedbackPercentage}>
                     </Statistics>
                  </Section>
             
