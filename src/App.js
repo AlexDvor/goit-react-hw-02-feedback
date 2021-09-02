@@ -1,8 +1,8 @@
 // import FeedBack from "./components/FeedBack";
 import React, { Component } from "react";
 
-import FeedBackButtons from "./components/FeedBackButtons";
-import FeedBackStat from "./components/FeedBackStat";
+import FeedBackButtons from "./components/FeedbackOptions";
+import Statistics from "./components/Statistics";
 import Container from "./components/Container/Container";
 
 
@@ -10,9 +10,6 @@ import Container from "./components/Container/Container";
 
 class App extends Component {
 
-  // static defaultProps = {
-
-  // }
 
     state = {
         good: 0,
@@ -73,13 +70,13 @@ class App extends Component {
         return (
         <Container>
             <FeedBackButtons updatedState={this.updatedState}></FeedBackButtons>
-            <FeedBackStat
+            <Statistics
               state={this.state}
               totalFeedback={totalFeedback}
               positiveFeedbackPercentage={positiveFeedbackPercentage}>
               
               
-              </FeedBackStat>
+              </Statistics>
         </Container>
                         )
                 }

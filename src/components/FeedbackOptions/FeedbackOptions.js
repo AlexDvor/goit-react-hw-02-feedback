@@ -1,5 +1,5 @@
 
-import style from './FeedBackButtons.module.css'
+import style from './FeedbackOptions.module.css'
 
 function FeedBackButtons({updatedState}) {
     return (
