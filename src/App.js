@@ -1,7 +1,7 @@
 // import FeedBack from "./components/FeedBack";
 import React, { Component } from "react";
 
-import FeedBackButtons from "./components/FeedbackOptions";
+import FeedbackOptions from "./components/FeedbackOptions";
 import Statistics from "./components/Statistics";
 import Container from "./components/Container/Container";
 import Section from "./components/Section";
@@ -74,7 +74,7 @@ class App extends Component {
             <Container>
 
                 <Section text='please leave feedback'>
-                    <FeedBackButtons onLeaveFeedback={this.leaveFeedback}></FeedBackButtons>
+                    <FeedbackOptions onLeaveFeedback={this.leaveFeedback}></FeedbackOptions>
                 </Section>
 
                 <Section text='statistics'>
