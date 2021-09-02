@@ -42,13 +42,20 @@ class App extends Component {
             })
         }
     }
-        
+  
+  
+  countTotalFeedback = () => {
+    const { good, neutral, bad } = this.state;
+    return good + neutral + bad;
+    
+  }
+
 
     render () {
         return (
         <Container>
             <FeedBackButtons updatedState={this.updatedState}></FeedBackButtons>
-            <FeedBackStat state={this.state}></FeedBackStat>
+            <FeedBackStat state={this.state} onCountTotalFeedback={this.countTotalFeedback}></FeedBackStat>
         </Container>
                         )
                 }
