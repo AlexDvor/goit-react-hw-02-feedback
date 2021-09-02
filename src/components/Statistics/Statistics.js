@@ -6,7 +6,6 @@ function FeedBackStat({ state, totalFeedback, positiveFeedbackPercentage } ) {
   
     return (
         <>
-            <h3>statistics</h3>
             <p>good: {good}</p>
             <p>neutral: {neutral}</p>
             <p>bad: {bad}</p>
