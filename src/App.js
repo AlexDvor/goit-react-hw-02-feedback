@@ -4,6 +4,7 @@ import React, { Component } from "react";
 import FeedBackButtons from "./components/FeedbackOptions";
 import Statistics from "./components/Statistics";
 import Container from "./components/Container/Container";
+import Section from "./components/Section";
 
 
 
@@ -68,15 +69,20 @@ class App extends Component {
     const positiveFeedbackPercentage = this.countPositiveFeedbackPercentage(totalFeedback);
 
         return (
-        <Container>
-            <FeedBackButtons updatedState={this.updatedState}></FeedBackButtons>
-            <Statistics
-              state={this.state}
-              totalFeedback={totalFeedback}
-              positiveFeedbackPercentage={positiveFeedbackPercentage}>
-              
-              
-              </Statistics>
+            <Container>
+
+                <Section text='please leave feedback'>
+                    <FeedBackButtons updatedState={this.updatedState}></FeedBackButtons>
+                </Section>
+
+                <Section text='statistics'>
+                    <Statistics
+                        state={this.state}
+                        totalFeedback={totalFeedback}
+                        positiveFeedbackPercentage={positiveFeedbackPercentage}>
+                    </Statistics>
+                 </Section>
+            
         </Container>
                         )
                 }
