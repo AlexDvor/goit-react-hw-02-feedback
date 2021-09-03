@@ -1,7 +1,8 @@
-import style from './Container.module.css';
+import {Box} from './Container.styled'
+
 
 function Container({ children }) {
-  return <div className={style.container}>{children}</div>;
+  return <Box>{children}</Box>;
 }
 
 export default Container;

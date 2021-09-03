@@ -1,14 +1,15 @@
 
-import style from './FeedbackOptions.module.css'
+// import style from './FeedbackOptions.module.css'
+import {Buttons} from './FeedbackOptions.styled'
 import PropTypes from 'prop-types';
 
 function FeedbackOptions({onLeaveFeedback}) {
     return (
         <>
-            <button className={style.btn} onClick={()=>onLeaveFeedback("good")}>good</button>
-            <button className={style.btn} onClick={()=>onLeaveFeedback("neutral")}>neutral</button>
-            <button className={style.btn} onClick={() =>onLeaveFeedback("bad")}>bad</button>
-            </>
+            <Buttons onClick={()=>onLeaveFeedback("good")}>good</Buttons>
+            <Buttons onClick={()=>onLeaveFeedback("neutral")}>neutral</Buttons>
+            <Buttons onClick={() =>onLeaveFeedback("bad")}>bad</Buttons>
+        </>
     )
 }
 
