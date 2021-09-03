@@ -15,31 +15,14 @@ class App extends Component {
         bad: 0
     }
 
-    leaveFeedback = value => {
+    changeState = value => {
+        this.setState((prevState) => {
+            return {
+                [value]: prevState[value] + 1
+            }
+        })
+        
 
-        if (value === "good") {
-            this.setState((prevState) => {
-                return {
-                  good: prevState.good + 1
-                }
-            })
-        }
-
-        if (value === "neutral") {
-            this.setState((prevState) => {
-                return {
-                    neutral: prevState.neutral + 1
-                }
-            })
-        }
-
-        if (value === "bad") {
-            this.setState((prevState) => {
-                return {
-                    bad: prevState.bad + 1
-                }
-            })
-        }
     }
   
   
@@ -70,7 +53,7 @@ class App extends Component {
             <Container>
 
                 <Section text='please leave feedback'>
-                    <FeedbackOptions onLeaveFeedback={this.leaveFeedback}></FeedbackOptions>
+                    <FeedbackOptions options={["good","neutral","bad"]} onchangeState={this.changeState}></FeedbackOptions>
                 </Section>
 
                 <Section text='statistics'>
