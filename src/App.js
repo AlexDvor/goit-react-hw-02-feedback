@@ -55,7 +55,7 @@ class App extends Component {
 
     const { good } = this.state;
     const percentage = good / total * 100;
-    return percentage.toFixed();
+    return Number(percentage.toFixed());
     
   }
 
