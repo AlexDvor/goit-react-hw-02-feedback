@@ -1,5 +1,4 @@
 
-// import style from './FeedbackOptions.module.css'
 import {Buttons} from './FeedbackOptions.styled'
 import PropTypes from 'prop-types';
 

@@ -1,9 +1,10 @@
 import PropTypes from 'prop-types';
+import { NotificationMessage } from './Notification.styled.jsx'
 
 function Notification({ message }) {
     return (
         <>
-            <p>{message}</p>
+            <NotificationMessage>{message}</NotificationMessage>
         </>
         
     )
