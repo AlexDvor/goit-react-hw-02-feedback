@@ -5,8 +5,6 @@ import Container from "./components/Container/Container";
 import Section from "./components/Section";
 
 
-
-
 class App extends Component {
 
     state = {
@@ -21,8 +19,6 @@ class App extends Component {
                 [value]: prevState[value] + 1
             }
         })
-        
-
     }
   
   
@@ -53,10 +49,16 @@ class App extends Component {
             <Container>
 
                 <Section text='please leave feedback'>
-                    <FeedbackOptions options={["good","neutral","bad"]} onchangeState={this.changeState}></FeedbackOptions>
+
+                    <FeedbackOptions
+                        options={["good", "neutral", "bad"]}
+                        onchangeState={this.changeState}>
+                    </FeedbackOptions>
+
                 </Section>
 
                 <Section text='statistics'>
+
                     <Statistics
                         good={good}
                         neutral={neutral}
@@ -64,14 +66,13 @@ class App extends Component {
                         total={totalFeedback}
                         positivePercentage={positiveFeedbackPercentage}>
                     </Statistics>
+                    
                  </Section>
             
         </Container>
                         )
                 }
             
-
-
 };
 
 export default App;
